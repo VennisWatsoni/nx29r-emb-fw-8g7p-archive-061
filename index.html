@@ -3,41 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人获奖证书展示</title>
+    <title>个人作品集</title>
     <style>
         *{box-sizing:border-box;margin:0;padding:0}
         body{background:#f5f5f5;font-family:system-ui,sans-serif;padding:20px}
-        h1{text-align:center;margin-bottom:30px;color:#222;font-size:22px}
+        h1{text-align:center;margin-bottom:16px;color:#222;font-size:26px}
+        h2{margin:40px 0 20px;color:#333;font-size:20px;border-left:4px solid #4078c0;padding-left:10px}
+        .info{text-align:center;margin-bottom:32px;font-size:16px;line-height:1.8}
+        .info a{color:#4078c0;text-decoration:none}
+        .info a:hover{text-decoration:underline}
         .tip{text-align:center;color:#666;margin-bottom:24px;font-size:14px}
         .container{max-width:900px;margin:0 auto;display:grid;gap:30px}
         .card{background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 8px #00000015}
         .card img{width:100%;height:auto;border-radius:6px;display:block}
         .card p{text-align:center;margin-top:12px;color:#333;font-weight:500}
+        .project-desc{padding:12px 0;color:#444;line-height:1.6}
+        .comp-desc{margin-top:10px;color:#444;line-height:1.6;text-align:left;font-weight:normal}
     </style>
 </head>
 <body>
-    <h1>🏆 学科竞赛获奖证书</h1>
+    <h1>个人作品集</h1>
+    <!-- 个人信息：GitHub + 邮箱 -->
+    <div class="info">
+        <p>GitHub：<a href="https://github.com/VennisWatsoni" target="_blank">VennisWatsoni</a></p>
+        <p>邮箱：pozinheaven@outlook.com</p>
+    </div>
+
+    <!-- 软件项目 -->
+    <h2>💻 软件项目</h2>
+    <div class="container">
+        <div class="card">
+            <p class="project-desc">DeskPuppy 双主控桌面交互设备</p>
+            <p class="project-desc">基于 ESP32‑C3 + STM32 双主控，上下层FreeRTOS调度；ESP32-C3实现语音识别输出、WiFi联网，串口下发指令；STM32负责舵机、MPU6050、烟雾/温湿度传感器、OLED驱动。</p>
+            <p>项目地址：<a href="https://github.com/VennisWatsoni/DeskPuppy" target="_blank">https://github.com/VennisWatsoni/DeskPuppy</a></p>
+        </div>
+    </div>
+
+    <!-- 硬件项目图片 -->
+    <h2>🔌 硬件PCB项目</h2>
+    <p class="tip">mypcb为跟随凡亿教育Allegro教程临摹的四轴飞行器主控板</p>
+    <div class="container">
+        <div class="card">
+            <img src="img/stc8g1k08a.png" alt="STC8G1K08A最小系统板">
+            <p>STC8G1K08A 最小系统板（早期作品）</p>
+        </div>
+        <div class="card">
+            <img src="img/stm32f431cbu6.png" alt="STM32F431核心板">
+            <p>STM32F431 开发板（早期作品）</p>
+        </div>
+        <div class="card">
+            <img src="img/mypcb.png" alt="四轴飞行器主控板">
+            <p>四轴飞行器主控板（凡亿Allegro临摹项目）</p>
+        </div>
+    </div>
+
+    <!-- 竞赛证书 -->
+    <h2>🏆 学科竞赛获奖证书</h2>
     <p class="tip">注：图片已隐去队友姓名，保护团队成员隐私</p>
     <div class="container">
         <div class="card">
             <img src="img/挑战杯.jpg" alt="挑战杯证书">
             <p>挑战杯</p>
+            <p class="comp-desc">项目研究新型电池负极材料，本人负责搭建检测设备，使用INA226芯片在实验室完成电池电量检测实验。</p>
         </div>
         <div class="card">
             <img src="img/第六届中国高校智能机器人创意大赛.jpg" alt="第六届中国高校智能机器人创意大赛">
             <p>第六届中国高校智能机器人创意大赛</p>
+            <p class="comp-desc">对电子鼠机器人进行软硬件优化，吸取往届项目失败经验，改进整机稳定性。</p>
         </div>
         <div class="card">
             <img src="img/第五届郑州师范学院创新创业大赛.jpg" alt="第五届郑州师范学院创新创业大赛">
             <p>第五届郑州师范学院创新创业大赛</p>
+            <p class="comp-desc">基于ESP32-S2设计噪音消除装置，本人主要负责算法开发，测算信号从采集到生成输出的时间差。</p>
         </div>
         <div class="card">
             <img src="img/高校电气电子工程创新大赛.jpg" alt="高校电气电子工程创新大赛">
             <p>第五届高校电气电子工程创新大赛</p>
+            <p class="comp-desc">负责项目文档整理、PS图片处理等材料工作，完成参赛材料排版与汇总。</p>
         </div>
         <div class="card">
             <img src="img/河南省大学生机器人竞赛.jpg" alt="河南省大学生机器人竞赛">
             <p>河南省大学生机器人竞赛</p>
+            <p class="comp-desc">负责机器人电机调试、PID参数整定以及红外传感器参数调节，保障机器人循迹运动稳定。</p>
         </div>
     </div>
 </body>
